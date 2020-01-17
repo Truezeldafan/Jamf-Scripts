@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#remove license from machine
+/Applications/GSP5.app/Contents/MacOS/GSP5_Rel_KCPT_31_105 -license deregister -name "The University of Chicago Laboratory Schools YJHU46" -code OBDFDFC8
+
+exit 0
