@@ -1,0 +1,5 @@
+#!/bin/sh
+
+WIFIPORT=$(/usr/sbin/networksetup -listallhardwareports | awk '/Wi-Fi|AirPort/{getline; print $NF}')
+
+/usr/libexec/airportd $WIFIPORT prefs RequireAdminIBSS=YES  RequireAdminPowerToggle=YES RequireAdminNetworkChange=YES
