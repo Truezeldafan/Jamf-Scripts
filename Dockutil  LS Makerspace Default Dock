@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# set to the path of dockutil
+dockutil="/usr/local/bin/dockutil"
+
+# Delete everything from the dock and replace it with a specific
+# selection of apps.
+${dockutil} --remove all --no-restart
+sleep 2 # we add a delay so that the dock has time to inialize the removal
+${dockutil} --add /Applications/Google\ Chrome.app --no-restart
+${dockutil} --add /Applications/Blender/blender.app --no-restart
+${dockutil} --add /Applications/Inkscape.app --no-restart
+#{dockutil} --add /Applications/Fusion360.app --no-restart
+${dockutil} --add /Applications/Adobe\ Illustrator\ CC\ 2018/Adobe\ Illustrator.app --no-restart
+${dockutil} --add /Applications/Adobe\ Photoshop\ CC\ 2018/Adobe\ Photoshop\ CC\ 2018.app --no-restart
+${dockutil} --add '/Applications' --view list --no-restart
+${dockutil} --add '~/Downloads' --view fan

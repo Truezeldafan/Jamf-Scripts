@@ -1,0 +1,11 @@
+#!/bin/bash
+#Removes Jamf MDM Profile and waits 20 secs
+jamf removeMdmProfile -verbose
+sleep 20
+#Removes any other profiles and waits 20 secs
+sudo profiles -Df
+sleep 20
+#Re-enrol in MDM, waits 20 secs and updates inventory
+sudo jamf mdm -verbose
+sleep 20
+sudo jamf recon
